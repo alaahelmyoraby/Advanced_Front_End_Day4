@@ -1,0 +1,27 @@
+<div class="container mt-3">
+  <h2>{{list}}</h2>
+  <button type="button" class="btn btn-primary">Add</button>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>UserName</th>
+        <th>Phone</th>
+        <th>#</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let person of people">
+        <td>{{ person[0] }}</td>
+        <td>{{ person[1] }}</td>
+        <td>{{ person[2] }}</td>
+        <td>
+          <button type="button" class="btn btn-primary">Details</button>
+          <button type="button" class="btn btn-danger"> Delete</button>
+          <button type="button" class="btn btn-warning">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

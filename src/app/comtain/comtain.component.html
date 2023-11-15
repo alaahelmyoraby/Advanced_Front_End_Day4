@@ -1,0 +1,17 @@
+<ul>
+  <li>{{product}}</li>
+  <li>{{product[0]}}</li>
+  <li>{{product[1]}}</li>
+  <li>{{product[2]}}</li>
+  <li>{{product[3]}}</li>
+</ul>
+
+<ul *ngFor="let x of product">
+
+  <li>{{x}}</li>
+</ul>
+
+<ul [ngSwitch]="days">
+  <li *ngSwitchCase="0">This is Sunday</li>
+  <li *ngSwitchDefault>Not Sunday</li>
+</ul>
