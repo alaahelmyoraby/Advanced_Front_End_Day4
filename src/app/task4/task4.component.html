@@ -1,3 +1,48 @@
+<!------------third method/-------------->
+<div> People List</div>
+<button type="button" class="btn btn-primary" (click)="addcustomer()">Add</button>
+<div>
+  <label for="name">Name:</label>
+  <input type="text" id="name" [(ngModel)]="newcustomname" />
+
+  <label for="username">Username:</label>
+  <input type="text" id="username" [(ngModel)]="newcustomuser" />
+
+  <label for="phone">Phone:</label>
+  <input type="text" id="phone" [(ngModel)]="newcustomphone" />
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Username</th>
+      <th scope="col">Phone</th>
+      <th scope="col">#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of cutomers; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ customer.Name }}</td>
+      <td>{{ customer.User }}</td>
+      <td>{{ customer.Phone }}</td>
+      <td>
+        <button type="button" class="btn btn-primary">Details</button>
+        <button type="button" class="btn btn-warning">Update</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+<!-----Day4-->
 <div class="container mt-3">
   <h2>{{list}}</h2>
   <button type="button" class="btn btn-primary">Add</button>
@@ -25,3 +70,29 @@
     </tbody>
   </table>
 </div>
+<!-------------Day5-->
+<div> People List</div>
+<button type="button" class="btn btn-primary">Details</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Username</th>
+      <th scope="col">Phone</th>
+      <th scope="col">#</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let na of name ;let it of username ;let ph of phone">
+      <th scope="row">1</th>
+      <td>{{na}}</td>
+      <td>{{it}}</td>
+      <td>{{ph}}</td>
+      <td>
+        <button type="button" class="btn btn-primary">Details</button>
+        <button type="button" class="btn btn-danger"> Delete</button>
+        <button type="button" class="btn btn-warning">Update</button>
+      </td>
+    </tr>

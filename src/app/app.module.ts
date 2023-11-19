@@ -1,10 +1,10 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ComtainComponent } from './comtain/comtain.component';
@@ -15,7 +15,6 @@ import { Task4Component } from './task4/task4.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    BodyComponent,
     FooterComponent,
     SidebarComponent,
     ComtainComponent,
@@ -24,7 +23,8 @@ import { Task4Component } from './task4/task4.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

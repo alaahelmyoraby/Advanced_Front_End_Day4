@@ -13,3 +13,6 @@ export class ComtainComponent {
   ];
   days= new Date().getDay();
 }
+
+
+
